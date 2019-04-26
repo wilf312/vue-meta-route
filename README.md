@@ -7,7 +7,11 @@ https://github.com/wilf312/vue-meta-route/blob/master/src/main.js
 // main.js
 // タイトル設定
 router.afterEach((to, _) => {
-  document.title = to.meta.hasOwnProperty('title') ? to.meta.title : 'default'
+  if (!titleBackup) {
+    titleBackup = document.title
+  }
+  document.title = to.meta.hasOwnProperty('title') ? to.meta.title : titleBackup
+  console.log('タイトル設定 =>', document.title)
 })
 
 ```
