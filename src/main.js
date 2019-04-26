@@ -12,6 +12,7 @@ router.afterEach((to, _) => {
     titleBackup = document.title
   }
   document.title = to.meta.hasOwnProperty('title') ? to.meta.title : titleBackup
+  console.log('タイトル設定 =>', document.title)
 })
 
 new Vue({

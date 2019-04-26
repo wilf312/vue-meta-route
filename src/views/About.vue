@@ -8,7 +8,6 @@
 export default {
   name: 'About',
   mounted() {
-    console.log(this.$route.meta)
   }
 }
 
